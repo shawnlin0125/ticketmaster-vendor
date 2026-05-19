@@ -1,0 +1,35 @@
+{
+  "_description": "TicketMaster events mock data — used by mock server and tests",
+  "events": [
+    {
+      "id": "evt_001",
+      "name": "Coldplay: Music of the Spheres World Tour",
+      "venue": "Kaohsiung National Stadium",
+      "start_time": "2026-11-15T19:00:00+08:00",
+      "end_time": "2026-11-15T22:00:00+08:00",
+      "status": "onsale",
+      "image_url": "https://example.com/coldplay.jpg",
+      "price_range": {"min": 1800, "max": 8800, "currency": "TWD"}
+    },
+    {
+      "id": "evt_002",
+      "name": "Jay Chou Carnival World Tour",
+      "venue": "Taipei Dome",
+      "start_time": "2026-12-20T19:30:00+08:00",
+      "end_time": "2026-12-20T22:30:00+08:00",
+      "status": "sold_out",
+      "image_url": "https://example.com/jaychou.jpg",
+      "price_range": {"min": 800, "max": 6880, "currency": "TWD"}
+    },
+    {
+      "id": "evt_003",
+      "name": "BTS Reunion Concert",
+      "venue": "Taipei Arena",
+      "start_time": "2027-01-10T18:00:00+08:00",
+      "end_time": "2027-01-10T21:00:00+08:00",
+      "status": "onsale",
+      "image_url": "https://example.com/bts.jpg",
+      "price_range": {"min": 2800, "max": 12800, "currency": "TWD"}
+    }
+  ]
+}

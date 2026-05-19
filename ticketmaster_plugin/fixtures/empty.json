@@ -1,0 +1,4 @@
+{
+  "_description": "Empty response — used to test edge case handling",
+  "events": []
+}

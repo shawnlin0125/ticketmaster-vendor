@@ -1,0 +1,6 @@
+{
+  "_description": "Malformed response — used to test error handling",
+  "events": null,
+  "error": "Internal server error",
+  "status": 500
+}

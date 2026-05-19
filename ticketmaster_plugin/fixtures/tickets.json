@@ -1,0 +1,55 @@
+{
+  "_description": "TicketMaster tickets mock data — used for ticket listing tests",
+  "tickets": [
+    {
+      "id": "tkt_001",
+      "event_id": "evt_001",
+      "section": "A1",
+      "row": "1",
+      "seat": "5",
+      "price": 8800,
+      "currency": "TWD",
+      "status": "available"
+    },
+    {
+      "id": "tkt_002",
+      "event_id": "evt_001",
+      "section": "A2",
+      "row": "3",
+      "seat": "12",
+      "price": 6800,
+      "currency": "TWD",
+      "status": "available"
+    },
+    {
+      "id": "tkt_003",
+      "event_id": "evt_001",
+      "section": "B1",
+      "row": "5",
+      "seat": "20",
+      "price": 4800,
+      "currency": "TWD",
+      "status": "reserved"
+    },
+    {
+      "id": "tkt_004",
+      "event_id": "evt_002",
+      "section": "VIP",
+      "row": "1",
+      "seat": "1",
+      "price": 6880,
+      "currency": "TWD",
+      "status": "sold"
+    },
+    {
+      "id": "tkt_005",
+      "event_id": "evt_003",
+      "section": "Floor A",
+      "row": "2",
+      "seat": "8",
+      "price": 12800,
+      "currency": "TWD",
+      "status": "available"
+    }
+  ]
+}
