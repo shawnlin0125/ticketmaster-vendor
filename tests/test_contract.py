@@ -69,3 +69,16 @@ async def test_has_business_methods(plugin):
     assert hasattr(plugin, "check_inventory")
     assert callable(plugin.search)
     assert callable(plugin.create_order)
+
+
+async def test_repo_url(plugin):
+    """Plugin must declare its source repo URL for traceability."""
+    assert hasattr(plugin, "repo_url")
+    assert "ticketmaster-vendor" in plugin.repo_url
+
+
+async def test_version_format(plugin):
+    """Version must follow semver format."""
+    parts = plugin.version.split(".")
+    assert len(parts) == 3
+    assert all(p.isdigit() for p in parts)
