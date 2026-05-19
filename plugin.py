@@ -183,7 +183,7 @@ class TicketmasterPlugin(Plugin, VendorProxy):
 
     def get_mock_server(self):
         """Return a mock TicketMaster API server (downstream: external vendor)."""
-        from ticketmaster_plugin.mock.vendor.server import TicketmasterMockServer
+        from mock.vendor.server import TicketmasterMockServer
 
         fixtures_dir = _HERE / "fixtures"
         return TicketmasterMockServer(fixtures_dir)
@@ -194,7 +194,7 @@ class TicketmasterPlugin(Plugin, VendorProxy):
         This simulates the 業務系統 making requests to the proxy's
         unified API endpoints (search, orders, inventory).
         """
-        from ticketmaster_plugin.mock.business.server import BusinessMockClient
+        from mock.business.server import BusinessMockClient
 
         return BusinessMockClient
 
@@ -222,7 +222,7 @@ class TicketmasterPlugin(Plugin, VendorProxy):
         test_files = sorted((_HERE / "tests").glob("test_*.py"))
 
         for tf in test_files:
-            module_name = f"ticketmaster_plugin.tests.{tf.stem}"
+            module_name = f"tests.{tf.stem}"
             try:
                 mod = importlib.import_module(module_name)
                 for name in dir(mod):

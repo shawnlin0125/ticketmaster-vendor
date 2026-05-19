@@ -1,7 +1,7 @@
 """Pytest fixtures for ticketmaster plugin tests."""
 
 import pytest
-from ticketmaster_plugin.plugin import TicketmasterPlugin
+from plugin import TicketmasterPlugin
 
 
 @pytest.fixture

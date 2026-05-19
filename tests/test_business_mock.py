@@ -29,7 +29,7 @@ async def test_business_mock_client_exists(plugin):
 
 async def test_business_mock_url_format():
     """Verify the URL format includes vendor in the path."""
-    from ticketmaster_plugin.mock.business.server import BusinessMockClient
+    from mock.business.server import BusinessMockClient
 
     client = BusinessMockClient(proxy_base_url="http://127.0.0.1:8080", vendor="ticketmaster")
     assert client._api_prefix == "/api/v1/ticketmaster"
@@ -41,7 +41,7 @@ async def test_business_mock_url_format():
 
 async def test_scenarios_exist():
     """All required business scenarios must be defined."""
-    from ticketmaster_plugin.mock.business.scenarios import SCENARIOS
+    from mock.business.scenarios import SCENARIOS
 
     assert "happy_path" in SCENARIOS
     assert "vendor_timeout" in SCENARIOS
@@ -52,7 +52,7 @@ async def test_scenarios_exist():
 
 async def test_happy_path_scenario_covers_all_endpoints():
     """Happy path scenario must cover: search → order → get → poll → inventory."""
-    from ticketmaster_plugin.mock.business.scenarios import HAPPY_PATH
+    from mock.business.scenarios import HAPPY_PATH
 
     actions = [step[0] for step in HAPPY_PATH]
     assert "search" in actions

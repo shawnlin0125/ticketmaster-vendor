@@ -3,11 +3,6 @@
 # This CI runs ONLY when this vendor repo changes.
 # It does NOT know about other vendors — integration testing
 # happens in the ticket-vendor meta-repo.
-#
-# On push to main (after PR merge):
-#   1. Run tests
-#   2. Tag release
-#   3. Notify meta-repo (via repository_dispatch)
 
 name: Vendor CI
 
@@ -31,7 +26,7 @@ jobs:
 
       - name: Install platform-plugin-sdk (from plugin-hub)
         run: |
-          pip install git+https://github.com/shawnlin0125/plugin-hub.git#subdirectory=platform-plugin-sdk
+          pip install git+https://github.com/shawnlin0125/plugin-hub.git@go-rewrite#subdirectory=platform-plugin-sdk
 
       - name: Install unified-ticket-api (from ticket-vendor meta-repo)
         run: |

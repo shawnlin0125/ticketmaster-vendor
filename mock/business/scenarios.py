@@ -5,8 +5,8 @@ a real-world workflow. Tests iterate through these scenarios and verify
 the proxy handles each step correctly.
 
 Usage in tests:
-    from ticketmaster_plugin.mock.business.scenarios import SCENARIOS, run_scenario
-    from ticketmaster_plugin.mock.business.server import BusinessMockClient
+    from mock.business.scenarios import SCENARIOS, run_scenario
+    from mock.business.server import BusinessMockClient
 
     client = BusinessMockClient(proxy_url="http://127.0.0.1:8080", vendor="ticketmaster")
     results = await run_scenario(client, SCENARIOS["happy_path"])
